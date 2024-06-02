@@ -1,10 +1,10 @@
-//  FilmsService.swift
+//  RealFilmService.swift
 //  GhibliGuide
 //  Made with ♥︎ by Inge Chiles on 5/30/24.
 
 import Foundation
 
-protocol FilmsServiceProtocol {
+protocol FilmService {
     func getFilms() async throws -> [Film]
 }
 
@@ -13,9 +13,10 @@ enum URLError: Error {
     case networkError
 }
 
-class RealFilmsService: FilmsServiceProtocol {
+class RealFilmService: FilmService {
     private let session = URLSession.shared
 
+    ///  Decodes and returns an array of Film objects from Ghibli API.
     func getFilms() async throws -> [Film] {
         guard let url = URL(string: "https://ghibliapi.vercel.app/films") else {
             return []

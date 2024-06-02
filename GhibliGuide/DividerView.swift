@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+/// Reusable dividing line view.
 struct DividerView: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 15)

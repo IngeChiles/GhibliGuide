@@ -32,12 +32,12 @@ struct FilmDetailView: View {
                     Text(filmDetailVM.title)
                         .fontWeight(.bold)
                         .font(.largeTitle)
-                    Text("\"\(filmDetailVM.original_title)\"")
+                    Text("\"\(filmDetailVM.originalTitle)\"")
                         .fontWeight(.bold)
                         .font(.title)
                     Text("Dir: \(filmDetailVM.director)")
-                    Text(filmDetailVM.release_date)
-                    Text("Runtime: \(filmDetailVM.run_time) Minutes")
+                    Text(filmDetailVM.releaseDate)
+                    Text("Runtime: \(filmDetailVM.runTime) Minutes")
 
                     DividerView()
 
@@ -55,7 +55,7 @@ struct FilmDetailView: View {
     let film = Film(
         id: "2baf70d1-42bb-4437-b551-e5fed5a87abe",
         title: "Castle in the Sky",
-        original_title: "天空の城ラピュタ",
+        originalTitle: "天空の城ラピュタ",
         image: URL(string: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/npOnzAbLh6VOIu3naU5QaEcTepo.jpg"),
         description: """
         The orphan Sheeta inherited a mysterious/
@@ -67,8 +67,8 @@ struct FilmDetailView: View {
         Laputa's science to make himself ruler of the world.
         """,
         director: "Hayao Miyazaki",
-        release_date: "1986",
-        running_time: "124")
+        releaseDate: "1986",
+        runningTime: "124")
 
     return FilmDetailView(filmDetailVM: FilmDetailViewModel(film: film))
 }

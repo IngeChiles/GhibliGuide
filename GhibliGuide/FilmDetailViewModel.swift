@@ -3,27 +3,27 @@
 //  Made with ♥︎ by Inge Chiles on 5/30/24.
 
 import Foundation
+
+/// ViewModel for FilmDetailView, which displays a detail view for a film.
 class FilmDetailViewModel: ObservableObject {
 
     @Published var id: String
     @Published var title: String
-    @Published var original_title: String
+    @Published var originalTitle: String
     @Published var image: URL?
     @Published var description: String
     @Published var director: String
-    @Published var release_date: String
-    @Published var run_time: String
-
-//    private let film: Film
+    @Published var releaseDate: String
+    @Published var runTime: String
 
     init(film: Film) {
         self.id = film.id
         self.title = film.title
-        self.original_title = film.original_title
+        self.originalTitle = film.originalTitle
         self.image = film.image
         self.description = film.description
         self.director = film.director
-        self.release_date = film.release_date
-        self.run_time = film.running_time
+        self.releaseDate = film.releaseDate
+        self.runTime = film.runningTime
     }
 }

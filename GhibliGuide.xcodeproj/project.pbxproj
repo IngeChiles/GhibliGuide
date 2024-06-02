@@ -11,15 +11,16 @@
 		838B3EEA2C09158B00518808 /* FilmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3EE92C09158B00518808 /* FilmListView.swift */; };
 		838B3EEC2C09158C00518808 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838B3EEB2C09158C00518808 /* Assets.xcassets */; };
 		838B3EEF2C09158C00518808 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838B3EEE2C09158C00518808 /* Preview Assets.xcassets */; };
-		838B3EF92C09158C00518808 /* GhibliGuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3EF82C09158C00518808 /* GhibliGuideTests.swift */; };
+		838B3EF92C09158C00518808 /* FilmListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3EF82C09158C00518808 /* FilmListViewModelTests.swift */; };
 		838B3F032C09158C00518808 /* GhibliGuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F022C09158C00518808 /* GhibliGuideUITests.swift */; };
 		838B3F052C09158C00518808 /* GhibliGuideUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F042C09158C00518808 /* GhibliGuideUITestsLaunchTests.swift */; };
 		838B3F122C0915F500518808 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F112C0915F500518808 /* Model.swift */; };
-		838B3F142C09180B00518808 /* RealFilmsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F132C09180B00518808 /* RealFilmsService.swift */; };
-		838B3F162C09194500518808 /* FilmsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F152C09194500518808 /* FilmsListViewModel.swift */; };
+		838B3F142C09180B00518808 /* RealFilmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F132C09180B00518808 /* RealFilmService.swift */; };
+		838B3F162C09194500518808 /* FilmListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F152C09194500518808 /* FilmListViewModel.swift */; };
 		838B3F182C09329D00518808 /* FilmDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F172C09329D00518808 /* FilmDetailView.swift */; };
 		838B3F1A2C0935E500518808 /* FilmDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F192C0935E500518808 /* FilmDetailViewModel.swift */; };
 		838B3F1C2C097A0F00518808 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F1B2C097A0F00518808 /* DividerView.swift */; };
+		83ECFA4E2C0C1E6B00FF050D /* MockFilmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECFA4D2C0C1E6B00FF050D /* MockFilmService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +47,17 @@
 		838B3EEB2C09158C00518808 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		838B3EEE2C09158C00518808 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		838B3EF42C09158C00518808 /* GhibliGuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhibliGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		838B3EF82C09158C00518808 /* GhibliGuideTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhibliGuideTests.swift; sourceTree = "<group>"; };
+		838B3EF82C09158C00518808 /* FilmListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListViewModelTests.swift; sourceTree = "<group>"; };
 		838B3EFE2C09158C00518808 /* GhibliGuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GhibliGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		838B3F022C09158C00518808 /* GhibliGuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhibliGuideUITests.swift; sourceTree = "<group>"; };
 		838B3F042C09158C00518808 /* GhibliGuideUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhibliGuideUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		838B3F112C0915F500518808 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		838B3F132C09180B00518808 /* RealFilmsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealFilmsService.swift; sourceTree = "<group>"; };
-		838B3F152C09194500518808 /* FilmsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsListViewModel.swift; sourceTree = "<group>"; };
+		838B3F132C09180B00518808 /* RealFilmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealFilmService.swift; sourceTree = "<group>"; };
+		838B3F152C09194500518808 /* FilmListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListViewModel.swift; sourceTree = "<group>"; };
 		838B3F172C09329D00518808 /* FilmDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailView.swift; sourceTree = "<group>"; };
 		838B3F192C0935E500518808 /* FilmDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailViewModel.swift; sourceTree = "<group>"; };
 		838B3F1B2C097A0F00518808 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		83ECFA4D2C0C1E6B00FF050D /* MockFilmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFilmService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +112,8 @@
 				838B3EE92C09158B00518808 /* FilmListView.swift */,
 				838B3F172C09329D00518808 /* FilmDetailView.swift */,
 				838B3F192C0935E500518808 /* FilmDetailViewModel.swift */,
-				838B3F152C09194500518808 /* FilmsListViewModel.swift */,
-				838B3F132C09180B00518808 /* RealFilmsService.swift */,
+				838B3F152C09194500518808 /* FilmListViewModel.swift */,
+				838B3F132C09180B00518808 /* RealFilmService.swift */,
 				838B3F1B2C097A0F00518808 /* DividerView.swift */,
 				838B3F112C0915F500518808 /* Model.swift */,
 				838B3EEB2C09158C00518808 /* Assets.xcassets */,
@@ -131,7 +133,8 @@
 		838B3EF72C09158C00518808 /* GhibliGuideTests */ = {
 			isa = PBXGroup;
 			children = (
-				838B3EF82C09158C00518808 /* GhibliGuideTests.swift */,
+				838B3EF82C09158C00518808 /* FilmListViewModelTests.swift */,
+				83ECFA4D2C0C1E6B00FF050D /* MockFilmService.swift */,
 			);
 			path = GhibliGuideTests;
 			sourceTree = "<group>";
@@ -153,7 +156,7 @@
 			buildConfigurationList = 838B3F082C09158C00518808 /* Build configuration list for PBXNativeTarget "GhibliGuide" */;
 			buildPhases = (
 				838B3EE02C09158B00518808 /* Sources */,
-				838B3F1D2C09810F00518808 /* ShellScript */,
+				83ECFA4C2C0C0EE700FF050D /* ShellScript */,
 				838B3EE12C09158B00518808 /* Frameworks */,
 				838B3EE22C09158B00518808 /* Resources */,
 			);
@@ -171,6 +174,7 @@
 			buildConfigurationList = 838B3F0B2C09158C00518808 /* Build configuration list for PBXNativeTarget "GhibliGuideTests" */;
 			buildPhases = (
 				838B3EF02C09158C00518808 /* Sources */,
+				83ECFA4F2C0C289500FF050D /* ShellScript */,
 				838B3EF12C09158C00518808 /* Frameworks */,
 				838B3EF22C09158C00518808 /* Resources */,
 			);
@@ -272,7 +276,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		838B3F1D2C09810F00518808 /* ShellScript */ = {
+		83ECFA4C2C0C0EE700FF050D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -288,7 +292,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+		};
+		83ECFA4F2C0C289500FF050D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: `swiftlint` command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -297,10 +319,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				838B3F162C09194500518808 /* FilmsListViewModel.swift in Sources */,
+				838B3F162C09194500518808 /* FilmListViewModel.swift in Sources */,
 				838B3F182C09329D00518808 /* FilmDetailView.swift in Sources */,
 				838B3F122C0915F500518808 /* Model.swift in Sources */,
-				838B3F142C09180B00518808 /* RealFilmsService.swift in Sources */,
+				838B3F142C09180B00518808 /* RealFilmService.swift in Sources */,
 				838B3EEA2C09158B00518808 /* FilmListView.swift in Sources */,
 				838B3EE82C09158B00518808 /* GhibliGuideApp.swift in Sources */,
 				838B3F1C2C097A0F00518808 /* DividerView.swift in Sources */,
@@ -312,7 +334,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				838B3EF92C09158C00518808 /* GhibliGuideTests.swift in Sources */,
+				838B3EF92C09158C00518808 /* FilmListViewModelTests.swift in Sources */,
+				83ECFA4E2C0C1E6B00FF050D /* MockFilmService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +551,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F3CD9UZ9BR;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -548,6 +572,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F3CD9UZ9BR;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;

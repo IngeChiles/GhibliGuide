@@ -1,11 +1,11 @@
-//  ContentView.swift
+//  FilmsListView.swift
 //  GhibliGuide
 //  Made with ♥︎ by Inge Chiles on 5/30/24.
 
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var filmListVM = FilmsListViewModel(service: RealFilmsService())
+    @StateObject var filmListVM = FilmListViewModel(service: RealFilmService())
 
     let columns = Array(repeating: GridItem(.flexible()), count: 2)
 
@@ -33,6 +33,7 @@ struct ContentView: View {
                                         }
                                 }
                                 .padding()
+//                                .dropShadow()
                             }
                         }
                     }

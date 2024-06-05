@@ -62,26 +62,25 @@ final class FilmStampingServiceTests: XCTestCase {
 
     var subject: FilmStampingService!
 
+    /// For each test run, clears UserDefaults before each test, and instantiates the service.
     override func setUp() {
         super.setUp()
-        // Clear UserDefaults before each test
         UserDefaults.standard.removeObject(forKey: "stampedFilms")
 
         subject = FilmStampingService()
     }
 
+    /// Following each test, clears UserDefaults and deallocates the service, setting subject value to nil.
     override func tearDown() {
-        // Clear UserDefaults after each test
         UserDefaults.standard.removeObject(forKey: "stampedFilms")
 
-        // Deallocate the service
         subject = nil
 
         super.tearDown()
     }
 
     // MARK: - Test init()
-
+    /// Tests that given a film's id being stored in UserDefaults, init() will load it when the service is instantiated.
     func testInitLoadsSavedData() {
         let testFilms: Set<String> = [testFilm1.id]
         if let data = try? JSONEncoder().encode(testFilms) {
@@ -90,68 +89,74 @@ final class FilmStampingServiceTests: XCTestCase {
 
         subject = FilmStampingService()
 
-        XCTAssertEqual(subject.getStampedFilms(), testFilms, "Service should load saved data correctly")
+        XCTAssertEqual(subject.getStampedFilms(), testFilms, "Service should load saved data correctly.")
     }
 
+    /// Tests that if there is no saved data, the result of getStampedFilms is empty.
     func testInitInitializesWithEmptySet() {
         XCTAssertTrue(
             subject.getStampedFilms().isEmpty,
-            "Service should initialize with an empty set if no saved data is found"
+            "Service should initialize with an empty set if no saved data is found."
         )
     }
 
     // MARK: - Test contains()
-
+    /// Tests that once a film is added to the array, the service returns true for that film.
     func testContainsReturnsTrueForContainedFilm() {
         subject.add(testFilm1)
-        XCTAssertTrue(subject.contains(testFilm1), "Service should return true for a film that is contained")
+        XCTAssertTrue(subject.contains(testFilm1), "Service should return true for a film that is contained.")
     }
-
+    /// Tests that if contains() is called for a film that has not been added to the array, it returns false.
     func testContainsReturnsFalseForNonContainedFilm() {
         subject.add(testFilm2)
-        XCTAssertFalse(subject.contains(testFilm1), "Service should return false for a film that is not contained")
+        XCTAssertFalse(subject.contains(testFilm1), "Service should return false for a film that is not contained.")
     }
 
     // MARK: - Test add()
-
+    /// Tests that when add() is called for a film, it is added for the set.
     func testAddAddsFilmToSet() {
         subject.add(testFilm1)
-        XCTAssertTrue(subject.contains(testFilm1), "Service should add a film to the set")
+        XCTAssertTrue(subject.contains(testFilm1), "Service should add a film to the set.")
     }
 
+    /// Tests that once a film is added to the set, the data is persisted.
     func testAddPersistsData() {
         subject.add(testFilm1)
 
         subject = FilmStampingService() // Reinitialize to simulate app restart
 
-        XCTAssertTrue(subject.contains(testFilm1), "Service should persist data across instances")
+        XCTAssertTrue(subject.contains(testFilm1), "Service should persist data across instances.")
     }
 
     // MARK: - Test remove()
-
+    /// Tests that once remove() is called for a film, that film is not in set.
     func testRemoveRemovesFilmFromSet() {
         subject.add(testFilm1)
         subject.remove(testFilm1)
-        XCTAssertFalse(subject.contains(testFilm1), "Service should remove a film from the set")
+        XCTAssertFalse(subject.contains(testFilm1), "Service should remove a film from the set.")
     }
 
+    /// Tests that remove() only removes film for which it has been called.
     func testRemoveDoesNotRemoveAllFilms() {
         subject.add(testFilm1)
         subject.add(testFilm2)
         subject.remove(testFilm2)
-        XCTAssertTrue(subject.contains(testFilm1), "Service should not remove non-removed film from the set")
+        XCTAssertTrue(subject.contains(testFilm1), "Service should not remove non-removed film from the set.")
     }
 
     // MARK: - Test getStampedFilms()
+    /// Tests that getStampedFilms() returns an empty set if there is no persisted data.
     func testGetStampedFilmsReturnsEmptySet() {
         XCTAssertTrue(subject.getStampedFilms().isEmpty)
     }
 
+    /// Tests that if a single film is persisted, getStampedFilms() returns it.
     func testGetStampedFilmsReturnsSingleFilm() {
         subject.add(testFilm1)
         XCTAssertEqual(subject.getStampedFilms(), [testFilm1.id])
     }
 
+    /// Tests that if there are multiple films persisted, getStampedFilms() returns all films.
     func testGetStampedFilmsReturnsMultipleFilms() {
         subject.add(testFilm1)
         subject.add(testFilm2)

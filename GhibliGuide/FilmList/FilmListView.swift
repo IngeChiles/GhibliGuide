@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+/// Displays a scrollable grid of film objects.
 struct FilmListView: View {
     @Environment(FilmStampingService.self) var stampedFilms
     @StateObject var filmListVM = FilmListViewModel(service: RealFilmService())
@@ -16,6 +17,8 @@ struct FilmListView: View {
                 LazyVGrid(columns: columns) {
                     if filmListVM.films.isEmpty {
                         ProgressView()
+                            .accessibilityLabel("Loading film list.")
+                            .accessibilityIdentifier("FilmListViewProgressView")
                     }
                     ForEach(filmListVM.films) { film in
                         NavigationLink {

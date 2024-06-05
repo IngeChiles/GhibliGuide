@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+/// Displays about section.
 struct InfoView: View {
     @Environment(\.openURL) var openURL
 
@@ -62,7 +63,6 @@ struct InfoView: View {
         .background(.oakLeaf)
     }
 }
-
 
 #Preview {
     InfoView()

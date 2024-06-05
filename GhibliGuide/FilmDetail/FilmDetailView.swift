@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+/// Displays detailView for film.
 struct FilmDetailView: View {
     @Environment(FilmStampingService.self) var stampedFilms
 

@@ -10,21 +10,23 @@ final class RealFilmServiceTests: XCTestCase {
 
     var subject: RealFilmService!
 
+    /// Creates the service prior to test run.
     override func setUp() {
         super.setUp()
 
         subject = RealFilmService()
     }
 
+    /// Deallocates the service following test run.
     override func tearDown() {
 
-        // Deallocate the service
         subject = nil
 
         super.tearDown()
     }
 
     // MARK: - Test loadData()
+    /// Tests that loadData() responds with a non-empty array of films.
     func testLoadDataReturnsFilms() async {
         do {
             let films = try await subject.getFilms()

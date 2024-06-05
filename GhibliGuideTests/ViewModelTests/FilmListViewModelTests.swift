@@ -17,6 +17,7 @@ final class FilmListViewModelTests: XCTestCase {
     }
 
     // MARK: - Test loadData()
+    /// Tests that films array is concurrent after loadData() is called.
     func testLoadDataUpdatesFilmsArray() async {
         await subject.loadData()
 

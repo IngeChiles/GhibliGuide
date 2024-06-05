@@ -13,12 +13,12 @@ struct GhibliGuideApp: App {
             .font: UIFont(name: "CactusClassicalSerif-Regular", size: 50)!,
             .foregroundColor: UIColor.oakLeaf
         ]
-        
+
         UINavigationBar.appearance().titleTextAttributes = [
             .font: UIFont(name: "CactusClassicalSerif-Regular", size: 30)!,
             .foregroundColor: UIColor.oakLeaf
         ]
-        
+
         if let font = UIFont(name: "CactusClassicalSerif-Regular", size: 16) {
             UIBarButtonItem.appearance().setTitleTextAttributes([
                 NSAttributedString.Key.font: font,

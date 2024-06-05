@@ -4,6 +4,7 @@
 
 import SwiftUI
 
+/// Displays a film and it's title, with an opacity overlay if filmStamped is true.
 struct FilmCell: View {
     @Environment(FilmStampingService.self) var stampedFilms
 
@@ -49,7 +50,6 @@ struct FilmCell: View {
             .padding(.bottom, 40)
         }
     }
-
 
 #Preview {
     let film = Film(

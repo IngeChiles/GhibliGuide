@@ -145,6 +145,31 @@
 			path = InfoScreen;
 			sourceTree = "<group>";
 		};
+		83382F802C10CF7600D1E37B /* ServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				83F156A72C0D1C3C00742B4E /* FilmStampingServiceTests.swift */,
+				8348C55C2C101AA6004373C2 /* RealFilmServiceTests.swift */,
+			);
+			path = ServiceTests;
+			sourceTree = "<group>";
+		};
+		83382F812C10CF9F00D1E37B /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				83ECFA4D2C0C1E6B00FF050D /* MockFilmService.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		83382F822C10CFB000D1E37B /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				838B3EF82C09158C00518808 /* FilmListViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
 		8348C5432C0FDE98004373C2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,10 +227,9 @@
 		838B3EF72C09158C00518808 /* GhibliGuideTests */ = {
 			isa = PBXGroup;
 			children = (
-				838B3EF82C09158C00518808 /* FilmListViewModelTests.swift */,
-				83ECFA4D2C0C1E6B00FF050D /* MockFilmService.swift */,
-				8348C55C2C101AA6004373C2 /* RealFilmServiceTests.swift */,
-				83F156A72C0D1C3C00742B4E /* FilmStampingServiceTests.swift */,
+				83382F822C10CFB000D1E37B /* ViewModelTests */,
+				83382F812C10CF9F00D1E37B /* Mocks */,
+				83382F802C10CF7600D1E37B /* ServiceTests */,
 			);
 			path = GhibliGuideTests;
 			sourceTree = "<group>";

@@ -34,6 +34,7 @@ struct InfoView: View {
 
                 Image("stick-divider")
                     .padding(.top, -20)
+                    .accessibilityHidden(true)
 
                 Text(infoText)
                     .font(

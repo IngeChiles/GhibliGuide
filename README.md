@@ -78,12 +78,4 @@ Disclaimer: I am in no way affiliated with Studio Ghibli. All films and characte
 
                     - Hiyao Miyazaki
         
-      
-## Roadmap
-The API is missing a few films, so I need to either hardcode JSON for the remaining films, or integrate an additional Ghibli API to make my array of films complete.
-
-Once the films returned are exhaustive, it would be fun to present the user with a delightful animation after watching all of them (i.e. "Congrats on watching every Ghibli Film!" with some sort of completed passport/certificate).
-
-I'd also like to add a view for the user to horizontally flip through their collection of watched/stamped films, designed to look like a passport. This would be a fun opportunity to learn about page-flipping animations.
-
-Finally, it would be fun to add an in-app rating system where users could rate their favorites on a scale of 1-5 Soot Sprites.
+    

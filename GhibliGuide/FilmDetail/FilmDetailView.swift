@@ -24,6 +24,8 @@ struct FilmDetailView: View {
                             .scaledToFit()
                             .clipShape(RoundedRectangle(cornerRadius: 15))
                             .shadow(radius: 10, x: 5, y: 10)
+                            .accessibilityLabel("Poster for \(filmDetailVM.film.title)")
+
                     } placeholder: {
                         RoundedRectangle(cornerRadius: 15)
                             .aspectRatio(1, contentMode: .fit)
@@ -34,6 +36,8 @@ struct FilmDetailView: View {
 
                     if stampedFilms.contains(filmDetailVM.film) {
                         Image("totoro-stamp-watched")
+                            .accessibilityLabel("\(filmDetailVM.film.title) is stamped.")
+
                     }
                 }
                 .padding()

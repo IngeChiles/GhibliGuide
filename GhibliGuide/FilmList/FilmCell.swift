@@ -25,6 +25,7 @@ struct FilmCell: View {
                         }
                         .clipShape(RoundedRectangle(cornerRadius: 15))
                         .shadow(radius: 10, x: 5, y: 10)
+                        .accessibilityLabel("Poster for \(film.title)")
 
                 } placeholder: {
                     RoundedRectangle(cornerRadius: 15)
@@ -40,7 +41,7 @@ struct FilmCell: View {
                     Image("totoro-stamp-watched")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .accessibilityLabel("\(film) is stamped.")
+                        .accessibilityLabel("\(film.title) is stamped.")
                 }
 
                 Text(film.title)

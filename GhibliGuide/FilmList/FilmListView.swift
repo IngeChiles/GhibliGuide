@@ -18,7 +18,6 @@ struct FilmListView: View {
                     if filmListVM.films.isEmpty {
                         ProgressView()
                             .accessibilityLabel("Loading film list.")
-                            .accessibilityIdentifier("FilmListViewProgressView")
                     }
                     ForEach(filmListVM.films) { film in
                         NavigationLink {
@@ -38,7 +37,6 @@ struct FilmListView: View {
                     NavigationLink(destination: InfoView()) {
                         Image(systemName: "info.circle")
                     }
-                    .accessibilityIdentifier("info")
                     .accessibilityLabel("Info Page")
                     Spacer()
                 }

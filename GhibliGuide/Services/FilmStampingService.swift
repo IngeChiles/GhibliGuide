@@ -22,29 +22,30 @@ class FilmStampingService {
         }
         films = []
     }
-    
+
     /// Returns true if our set contains this film.
     func contains(_ film: Film) -> Bool {
         films.contains(film.id)
     }
-    
+
     /// Adds the film to our set and saves the change.
     func add(_ film: Film) {
         films.insert(film.id)
         save()
     }
-    
+
     /// Removes the film from our set and saves the change.
     func remove(_ film: Film) {
         films.remove(film.id)
         save()
     }
-    
-    /// Returns all stamped films. This will be useful in a future version that will include a "Watched Films" collection.
+
+    /// Returns all stamped films. This will be useful in a future version that 
+    /// will include a "Watched Films" collection.
     func getStampedFilms() -> Set<String> {
         return films
     }
-    
+
     /// Saves changes to user defaults/app storage.
     private func save() {
         if let data = try? JSONEncoder().encode(films) {

@@ -1,6 +1,4 @@
-
-![Logo](https://github.com/IngeChiles/GhibliGuide/blob/main/Meta/GhibliGuideIconTransparent.png?raw=true)
-
+<img src="https://github.com/IngeChiles/GhibliGuide/blob/main/Meta/GhibliGuideIconTransparent.png?raw=true" width="400">
 
 
 

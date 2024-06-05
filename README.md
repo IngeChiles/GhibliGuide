@@ -24,13 +24,12 @@ https://ghibliapi.vercel.app/
 No authentication is needed to clone and run this app. Simply clone and open in XCode.
 ## Screenshots
 
-![App Screenshot](https://github.com/IngeChiles/GhibliGuide/blob/main/Meta/Ghibli-Guide-Main-Screen.png?raw=true)
-
-![App Screenshot](https://github.com/IngeChiles/GhibliGuide/blob/main/Meta/Ghibli-Guide-Main-Stamped.png?raw=true)
-
-![App Screenshot](https://github.com/IngeChiles/GhibliGuide/blob/main/Meta/Ghibli-Guide-Detail.png?raw=true)
-
-![App Screenshot](https://github.com/IngeChiles/GhibliGuide/blob/main/Meta/Ghibli-Guide-Detail-Stamped.png?raw=true)
+<p float="left">
+<img src="https://github.com/IngeChiles/GhibliGuide/blob/main/Meta/Ghibli-Guide-Main-Screen.png?raw=true" width="300">
+<img src="https://github.com/IngeChiles/GhibliGuide/blob/main/Meta/Ghibli-Guide-Main-Stamped.png?raw=true" width="300">
+<img src="https://github.com/IngeChiles/GhibliGuide/blob/main/Meta/Ghibli-Guide-Detail.png?raw=true" width="300">
+<img src="https://github.com/IngeChiles/GhibliGuide/blob/main/Meta/Ghibli-Guide-Detail-Stamped.png?raw=true" width="300">
+</p>
 
 
 ## Acknowledgements

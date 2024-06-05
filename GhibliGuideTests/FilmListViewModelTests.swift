@@ -11,6 +11,8 @@ final class FilmListViewModelTests: XCTestCase {
     var subject: FilmListViewModel!
 
     override func setUp() {
+        super.setUp()
+        
         subject = FilmListViewModel(service: MockFilmService())
     }
 

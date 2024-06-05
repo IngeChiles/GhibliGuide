@@ -9,11 +9,15 @@ import SwiftUI
 struct FilmLabelModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .padding(5)
-            .background(.walnut)
+            .padding(.vertical, 4)
+            .padding(.horizontal, 6)
+            .background(
+                RoundedRectangle(cornerRadius: 5)
+                    .fill(.forest)
+            )
             .multilineTextAlignment(.center)
-            .foregroundStyle(.cream)
-            .offset(x: 0, y: 130)
+            .foregroundStyle(.cloud)
+            .offset(x: 0, y: 120)
             .shadow(radius: 10, x: 5, y: 10)
     }
 }

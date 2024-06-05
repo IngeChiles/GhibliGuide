@@ -1,4 +1,4 @@
-//  Model.swift
+//  Film.swift
 //  GhibliGuide
 //  Made with ♥︎ by Inge Chiles on 5/30/24.
 

@@ -43,16 +43,7 @@ struct FilmCell: View {
                 }
 
                 Text(film.title)
-                    .padding(.vertical, 4)
-                    .padding(.horizontal, 6)
-                    .background(
-                        RoundedRectangle(cornerRadius: 5)
-                            .fill(.forest)
-                    )
-                    .multilineTextAlignment(.center)
-                    .foregroundStyle(.cloud)
-                    .offset(x: 0, y: 120)
-                    .shadow(radius: 10, x: 5, y: 10)
+                    .filmLabel()
             }
             .padding(3)
             .padding(.bottom, 40)

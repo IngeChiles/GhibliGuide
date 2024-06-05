@@ -1,10 +1,10 @@
-//  Info.swift
+//  InfoView.swift
 //  GhibliGuide
 //  Made with ♥︎ by Inge Chiles on 6/4/24.
 
 import SwiftUI
 
-struct Info: View {
+struct InfoView: View {
     let infoText = """
     Follows young Luke Skywalker as he joins forces \
     with Princess Leia, Han Solo, and Obi-Wan Kenobi \
@@ -45,5 +45,5 @@ struct Info: View {
 }
 
 #Preview {
-    Info()
+    InfoView()
 }

@@ -32,7 +32,7 @@ struct FilmListView: View {
             .navigationBarTitle("Ghibli Guide", displayMode: .large)
             .toolbar {
                 ToolbarItemGroup {
-                    NavigationLink(destination: Info()) {
+                    NavigationLink(destination: InfoView()) {
                         Image(systemName: "info.circle")
                     }
                     Spacer()

@@ -12,7 +12,7 @@ final class FilmListViewModelTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        
+
         subject = FilmListViewModel(service: MockFilmService())
     }
 

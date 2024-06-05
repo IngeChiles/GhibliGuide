@@ -21,53 +21,7 @@ struct FilmListView: View {
                         NavigationLink {
                             FilmDetailView(filmDetailVM: FilmDetailViewModel(film: film))
                         } label: {
-                            ZStack {
-                                AsyncImage(url: film.image) { image in
-                                    image
-                                        .resizable()
-                                        .scaledToFit()
-                                        .overlay {
-                                            if stampedFilms.contains(film) {
-                                                Rectangle()
-                                                    .foregroundStyle(.cloud)
-                                                    .opacity(0.5)
-                                            }
-                                        }
-                                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                                        .shadow(radius: 10, x: 5, y: 10)
-
-                                } placeholder: {
-                                    RoundedRectangle(cornerRadius: 15)
-                                        .frame(width: 170, height: 280)
-                                        .aspectRatio(1, contentMode: .fit)
-                                        .overlay {
-                                            ProgressView()
-                                        }
-                                }
-                                .padding(.bottom, 10)
-
-                                if stampedFilms.contains(film) {
-                                    Image("totoro-stamp-watched")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .accessibilityLabel("\(film) is stamped.")
-                                }
-
-                                Text(film.title)
-                                    .padding(.vertical, 4)
-                                    .padding(.horizontal, 6)
-//                                    .frame(width: 150, height: 100)
-                                    .background(
-                                        RoundedRectangle(cornerRadius: 5)
-                                            .fill(.forest)
-                                    )
-                                    .multilineTextAlignment(.center)
-                                    .foregroundStyle(.cloud)
-                                    .offset(x: 0, y: 120)
-                                    .shadow(radius: 10, x: 5, y: 10)
-                            }
-                            .padding(3)
-                            .padding(.bottom, 40)
+                            FilmCell(film: film)
                         }
                     }
                 }
@@ -75,19 +29,16 @@ struct FilmListView: View {
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(.cream)
-            .navigationBarTitle("Ghibli Guide", displayMode: .inline)
-//                                    .navigationTitle("Ghibli Guide")
+            .navigationBarTitle("Ghibli Guide", displayMode: .large)
             .toolbar {
-                ToolbarItemGroup() {
+                ToolbarItemGroup {
                     NavigationLink(destination: Info()) {
                         Image(systemName: "info.circle")
                     }
                     Spacer()
                 }
             }
-//            .toolbarColorScheme(.dark)
         }
-//        .foregroundStyle(.white)
         .accentColor(.forest)
         .task {
             await filmListVM.loadData()

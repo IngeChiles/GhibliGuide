@@ -7,13 +7,18 @@ import SwiftUI
 @main
 struct GhibliGuideApp: App {
     @State private var filmStamped = FilmStampingService()
+
     init() {
-        //        UINavigationBar.appearance().largeTitleTextAttributes = [.font : UIFont(name: "CactusClassicalSerif-Regular", size: 50)!]
-
-        UINavigationBar.appearance().titleTextAttributes = [.font : UIFont(name: "CactusClassicalSerif-Regular", size: 20)!]
-
-        //        UINavigationBar.appearance().tintColor = .white
-
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .font: UIFont(name: "CactusClassicalSerif-Regular", size: 50)!,
+            .foregroundColor: UIColor.oakLeaf
+        ]
+        
+        UINavigationBar.appearance().titleTextAttributes = [
+            .font: UIFont(name: "CactusClassicalSerif-Regular", size: 30)!,
+            .foregroundColor: UIColor.oakLeaf
+        ]
+        
         if let font = UIFont(name: "CactusClassicalSerif-Regular", size: 16) {
             UIBarButtonItem.appearance().setTitleTextAttributes([
                 NSAttributedString.Key.font: font,

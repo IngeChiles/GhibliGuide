@@ -14,13 +14,10 @@ struct FilmDetailView: View {
             VStack {
                 Image("stick-divider")
                     .accessibilityHidden(true)
-//                    .resizable()
-//                    .aspectRatio(contentMode: .fill)
                     .rotationEffect(.degrees(180))
 
                 ZStack(alignment: .bottomTrailing) {
-                    AsyncImage(url: filmDetailVM.film.image) {
-                        image in
+                    AsyncImage(url: filmDetailVM.film.image) { image in
                         image
                             .resizable()
                             .scaledToFit()
@@ -36,11 +33,9 @@ struct FilmDetailView: View {
 
                     if stampedFilms.contains(filmDetailVM.film) {
                         Image("totoro-stamp-watched")
-                        //                        .resizable()
                     }
                 }
                 .padding()
-
 
                 VStack {
                     Button(stampedFilms.contains(filmDetailVM.film) ? "Remove stamp" : "Hey I've seen this one!") {
@@ -80,11 +75,11 @@ struct FilmDetailView: View {
                 .foregroundStyle(.oakLeaf)
                 .padding(20)
 
-
                 Image("stick-divider")
             }
         }
         .background(.cream)
+        .navigationBarTitle("", displayMode: .inline)
     }
 }
 

@@ -94,7 +94,10 @@ final class FilmStampingServiceTests: XCTestCase {
     }
 
     func testInitInitializesWithEmptySet() {
-        XCTAssertTrue(subject.getStampedFilms().isEmpty, "Service should initialize with an empty set if no saved data is found")
+        XCTAssertTrue(
+            subject.getStampedFilms().isEmpty,
+            "Service should initialize with an empty set if no saved data is found"
+        )
     }
 
     // MARK: - Test contains()

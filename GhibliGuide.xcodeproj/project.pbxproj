@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83382F7A2C10C54900D1E37B /* FilmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83382F792C10C54900D1E37B /* FilmCell.swift */; };
 		8348C5402C0FD475004373C2 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8348C53F2C0FD475004373C2 /* Info.swift */; };
 		8348C55B2C0FE248004373C2 /* CactusClassicalSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8348C55A2C0FE248004373C2 /* CactusClassicalSerif-Regular.ttf */; };
 		8348C55D2C101AA6004373C2 /* RealFilmServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8348C55C2C101AA6004373C2 /* RealFilmServiceTests.swift */; };
+		8348C55F2C10B941004373C2 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8348C55E2C10B941004373C2 /* OFL.txt */; };
 		838B3EE82C09158B00518808 /* GhibliGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3EE72C09158B00518808 /* GhibliGuideApp.swift */; };
 		838B3EEA2C09158B00518808 /* FilmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3EE92C09158B00518808 /* FilmListView.swift */; };
 		838B3EEC2C09158C00518808 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 838B3EEB2C09158C00518808 /* Assets.xcassets */; };
@@ -46,10 +48,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		83382F792C10C54900D1E37B /* FilmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCell.swift; sourceTree = "<group>"; };
 		8348C53F2C0FD475004373C2 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		8348C5592C0FDF3F004373C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8348C55A2C0FE248004373C2 /* CactusClassicalSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CactusClassicalSerif-Regular.ttf"; sourceTree = "<group>"; };
 		8348C55C2C101AA6004373C2 /* RealFilmServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealFilmServiceTests.swift; sourceTree = "<group>"; };
+		8348C55E2C10B941004373C2 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		838B3EE42C09158B00518808 /* GhibliGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GhibliGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		838B3EE72C09158B00518808 /* GhibliGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhibliGuideApp.swift; sourceTree = "<group>"; };
 		838B3EE92C09158B00518808 /* FilmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListView.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 		8348C5432C0FDE98004373C2 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				8348C55E2C10B941004373C2 /* OFL.txt */,
 				8348C55A2C0FE248004373C2 /* CactusClassicalSerif-Regular.ttf */,
 			);
 			path = Fonts;
@@ -130,6 +135,7 @@
 				8348C5592C0FDF3F004373C2 /* Info.plist */,
 				838B3EE72C09158B00518808 /* GhibliGuideApp.swift */,
 				838B3EE92C09158B00518808 /* FilmListView.swift */,
+				83382F792C10C54900D1E37B /* FilmCell.swift */,
 				8348C53F2C0FD475004373C2 /* Info.swift */,
 				83ECFA502C0CDD2E00FF050D /* FilmStampingService.swift */,
 				838B3F172C09329D00518808 /* FilmDetailView.swift */,
@@ -281,6 +287,7 @@
 			files = (
 				838B3EEF2C09158C00518808 /* Preview Assets.xcassets in Resources */,
 				838B3EEC2C09158C00518808 /* Assets.xcassets in Resources */,
+				8348C55F2C10B941004373C2 /* OFL.txt in Resources */,
 				8348C55B2C0FE248004373C2 /* CactusClassicalSerif-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +362,7 @@
 				838B3EE82C09158B00518808 /* GhibliGuideApp.swift in Sources */,
 				8348C5402C0FD475004373C2 /* Info.swift in Sources */,
 				838B3F1A2C0935E500518808 /* FilmDetailViewModel.swift in Sources */,
+				83382F7A2C10C54900D1E37B /* FilmCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

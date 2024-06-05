@@ -70,8 +70,8 @@ struct FilmDetailView: View {
 
                     Text("**Plot: \(filmDetailVM.film.description)**")
                         .font(.title3)
-                        .multilineTextAlignment(.center)
                 }
+                .multilineTextAlignment(.center)
                 .foregroundStyle(.oakLeaf)
                 .padding(20)
 

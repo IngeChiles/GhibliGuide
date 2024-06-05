@@ -5,14 +5,21 @@
 import SwiftUI
 
 struct InfoView: View {
-    let infoText = """
-    Follows young Luke Skywalker as he joins forces \
-    with Princess Leia, Han Solo, and Obi-Wan Kenobi \
-    to battle the oppressive Galactic Empire and destroy \
-    its superweapon, the Death Star. Guided by the Force, \
-    Luke becomes a hero in the Rebel Alliance's quest \
-    to bring peace to the galaxy.
+    @Environment(\.openURL) var openURL
+
+    private let infoText =
     """
+    This is an iOS application for fans of Studio Ghibli films. All
+    aboard the cat bus!
+
+    Users can scroll through a display of Ghibli films, learning
+    about each film as they go. If a user has seen a given film,
+    they can mark it as "watched" with a cute Totoro stamp.
+
+    Disclaimer: I am in no way affiliated with Studio Ghibli. All
+    films and characters in this app are property of Studio Ghibli.
+    """
+
     var body: some View {
         ScrollView {
             VStack {
@@ -23,10 +30,10 @@ struct InfoView: View {
                             size: 40
                         )
                     )
-                
+
                 Image("stick-divider")
                     .padding(.top, -20)
-                
+
                 Text(infoText)
                     .font(
                         .custom(
@@ -34,15 +41,28 @@ struct InfoView: View {
                             size: 20
                         )
                     )
+                    .multilineTextAlignment(.center)
                     .padding(.top, 10)
+
+                Button("Ghibli API & License Info") {
+                    openURL(URL(string: "https://ghibliapi.vercel.app/")!)
+                }
+                .buttonStyle(.borderedProminent)
+                .accentColor(.forest)
+                .padding(.top, 20)
+
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .foregroundStyle(.cloud)
+
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.oakLeaf)
     }
 }
+
 
 #Preview {
     InfoView()

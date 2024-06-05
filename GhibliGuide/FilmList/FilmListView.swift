@@ -35,6 +35,8 @@ struct FilmListView: View {
                     NavigationLink(destination: InfoView()) {
                         Image(systemName: "info.circle")
                     }
+                    .accessibilityIdentifier("info")
+                    .accessibilityLabel("Info Page")
                     Spacer()
                 }
             }

@@ -22,10 +22,8 @@
 		838B3F162C09194500518808 /* FilmListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F152C09194500518808 /* FilmListViewModel.swift */; };
 		838B3F182C09329D00518808 /* FilmDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F172C09329D00518808 /* FilmDetailView.swift */; };
 		838B3F1A2C0935E500518808 /* FilmDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F192C0935E500518808 /* FilmDetailViewModel.swift */; };
-		838B3F1C2C097A0F00518808 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838B3F1B2C097A0F00518808 /* DividerView.swift */; };
 		83ECFA4E2C0C1E6B00FF050D /* MockFilmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECFA4D2C0C1E6B00FF050D /* MockFilmService.swift */; };
 		83ECFA512C0CDD2E00FF050D /* FilmStampingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83ECFA502C0CDD2E00FF050D /* FilmStampingService.swift */; };
-		83F156A62C0D126200742B4E /* StampOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F156A52C0D126200742B4E /* StampOverlayView.swift */; };
 		83F156A82C0D1C3C00742B4E /* FilmStampingServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F156A72C0D1C3C00742B4E /* FilmStampingServiceTests.swift */; };
 		83F156AE2C0E675000742B4E /* FilmLabelModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F156AD2C0E675000742B4E /* FilmLabelModifier.swift */; };
 /* End PBXBuildFile section */
@@ -67,10 +65,8 @@
 		838B3F152C09194500518808 /* FilmListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListViewModel.swift; sourceTree = "<group>"; };
 		838B3F172C09329D00518808 /* FilmDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailView.swift; sourceTree = "<group>"; };
 		838B3F192C0935E500518808 /* FilmDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailViewModel.swift; sourceTree = "<group>"; };
-		838B3F1B2C097A0F00518808 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		83ECFA4D2C0C1E6B00FF050D /* MockFilmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFilmService.swift; sourceTree = "<group>"; };
 		83ECFA502C0CDD2E00FF050D /* FilmStampingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmStampingService.swift; sourceTree = "<group>"; };
-		83F156A52C0D126200742B4E /* StampOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampOverlayView.swift; sourceTree = "<group>"; };
 		83F156A72C0D1C3C00742B4E /* FilmStampingServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmStampingServiceTests.swift; sourceTree = "<group>"; };
 		83F156AD2C0E675000742B4E /* FilmLabelModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmLabelModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,8 +137,6 @@
 				838B3F152C09194500518808 /* FilmListViewModel.swift */,
 				838B3F132C09180B00518808 /* RealFilmService.swift */,
 				838B3F112C0915F500518808 /* Model.swift */,
-				83F156A52C0D126200742B4E /* StampOverlayView.swift */,
-				838B3F1B2C097A0F00518808 /* DividerView.swift */,
 				83F156AD2C0E675000742B4E /* FilmLabelModifier.swift */,
 				838B3EEB2C09158C00518808 /* Assets.xcassets */,
 				8348C5432C0FDE98004373C2 /* Fonts */,
@@ -352,7 +346,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				83ECFA512C0CDD2E00FF050D /* FilmStampingService.swift in Sources */,
-				83F156A62C0D126200742B4E /* StampOverlayView.swift in Sources */,
 				838B3F162C09194500518808 /* FilmListViewModel.swift in Sources */,
 				838B3F182C09329D00518808 /* FilmDetailView.swift in Sources */,
 				83F156AE2C0E675000742B4E /* FilmLabelModifier.swift in Sources */,
@@ -361,7 +354,6 @@
 				838B3EEA2C09158B00518808 /* FilmListView.swift in Sources */,
 				838B3EE82C09158B00518808 /* GhibliGuideApp.swift in Sources */,
 				8348C5402C0FD475004373C2 /* Info.swift in Sources */,
-				838B3F1C2C097A0F00518808 /* DividerView.swift in Sources */,
 				838B3F1A2C0935E500518808 /* FilmDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

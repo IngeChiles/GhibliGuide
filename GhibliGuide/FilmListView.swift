@@ -22,11 +22,17 @@ struct FilmListView: View {
                             FilmDetailView(filmDetailVM: FilmDetailViewModel(film: film))
                         } label: {
                             ZStack {
-                                AsyncImage(url: film.image) {
-                                    image in
+                                AsyncImage(url: film.image) { image in
                                     image
                                         .resizable()
                                         .scaledToFit()
+                                        .overlay {
+                                            if stampedFilms.contains(film) {
+                                                Rectangle()
+                                                    .foregroundStyle(.cloud)
+                                                    .opacity(0.5)
+                                            }
+                                        }
                                         .clipShape(RoundedRectangle(cornerRadius: 15))
                                         .shadow(radius: 10, x: 5, y: 10)
 
@@ -82,7 +88,7 @@ struct FilmListView: View {
 //            .toolbarColorScheme(.dark)
         }
 //        .foregroundStyle(.white)
-        .accentColor(.oakLeaf)
+        .accentColor(.forest)
         .task {
             await filmListVM.loadData()
         }

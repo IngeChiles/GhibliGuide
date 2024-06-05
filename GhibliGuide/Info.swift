@@ -6,8 +6,13 @@ import SwiftUI
 
 struct Info: View {
     var body: some View {
-        Text("Disclaimer, copyright for fonts")
-            .font(.custom("CactusClassicalSerif-Regular", size: 20))
+        VStack {
+            Text("Disclaimer, copyright for fonts")
+                .font(.custom("CactusClassicalSerif-Regular", size: 20))
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.oakLeaf)
+        .foregroundStyle(.cloud)
     }
 }
 

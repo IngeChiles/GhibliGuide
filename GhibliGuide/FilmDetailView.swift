@@ -43,6 +43,17 @@ struct FilmDetailView: View {
 
 
                 VStack {
+                    Button(stampedFilms.contains(filmDetailVM.film) ? "Remove stamp" : "Hey I've seen this one!") {
+                        if stampedFilms.contains(filmDetailVM.film) {
+                            stampedFilms.remove(filmDetailVM.film)
+                        } else {
+                            stampedFilms.add(filmDetailVM.film)
+                        }
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .foregroundStyle(.cloud)
+                    .accentColor(.oakLeaf)
+                    .padding(.bottom)
 
                     Text(filmDetailVM.film.title)
                         .fontWeight(.bold)
@@ -60,22 +71,15 @@ struct FilmDetailView: View {
 
                     Text("Runtime: \(filmDetailVM.film.runningTime) Minutes")
 
-                    Text("Plot: \(filmDetailVM.film.description)")
+                    Spacer(minLength: 15)
+
+                    Text("**Plot: \(filmDetailVM.film.description)**")
                         .font(.title3)
                         .multilineTextAlignment(.center)
                 }
                 .foregroundStyle(.oakLeaf)
                 .padding(20)
-                Button(stampedFilms.contains(filmDetailVM.film) ? "Remove stamp" : "Hey I've seen this one!") {
-                    if stampedFilms.contains(filmDetailVM.film) {
-                        stampedFilms.remove(filmDetailVM.film)
-                    } else {
-                        stampedFilms.add(filmDetailVM.film)
-                    }
-                }
-                .buttonStyle(.borderedProminent)
-                .accentColor(.oakLeaf)
-                .padding()
+
 
                 Image("stick-divider")
             }

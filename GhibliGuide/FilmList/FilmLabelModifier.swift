@@ -7,6 +7,10 @@ import SwiftUI
 
 /// Modifier for labeling film titles.
 struct FilmLabelModifier: ViewModifier {
+    
+    /// Applies custom modifiers.
+    /// - Parameter content: content to be modified, in this case, a film label for the `title` property on a `Film` object.
+    /// - Returns: Modified view.
     func body(content: Content) -> some View {
         content
             .padding(.vertical, 4)
@@ -23,6 +27,9 @@ struct FilmLabelModifier: ViewModifier {
 }
 
 extension View {
+
+    /// Function to be used in code to apply the above modifiers.
+    /// - Returns: Modified view.
     func filmLabel() -> some View {
         self.modifier(FilmLabelModifier())
     }

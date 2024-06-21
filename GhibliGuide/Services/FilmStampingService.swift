@@ -8,10 +8,13 @@ import Foundation
 /// Class that stores a user's favorited films.
 @Observable
 class FilmStampingService {
+    /// A set of IDs of `Film` objects that have been marked as "watched".
     private var films: Set<String>
-
+    
+    /// Key for loading and saving IDs to and from `UserDefaults`.
     private let key = "stampedFilms"
 
+    /// Loads saved data from `UserDefaults` when initialized.
     init() {
         /// Load our saved data.
         if let data = UserDefaults.standard.data(forKey: key) {
@@ -24,17 +27,21 @@ class FilmStampingService {
     }
 
     /// Returns true if our set contains this film.
+    /// - Parameter film: `Film` object.
+    /// - Returns: Whether or not `films` contains the ID of a `Film` object.
     func contains(_ film: Film) -> Bool {
         films.contains(film.id)
     }
 
     /// Adds the film to our set and saves the change.
+    /// - Parameter film: `Film` object that user has marked as "watched".
     func add(_ film: Film) {
         films.insert(film.id)
         save()
     }
 
     /// Removes the film from our set and saves the change.
+    /// - Parameter film: `Film` object that user has removed from "watched".
     func remove(_ film: Film) {
         films.remove(film.id)
         save()
@@ -42,6 +49,7 @@ class FilmStampingService {
 
     /// Returns all stamped films. This will be useful in a future version that 
     /// will include a "Watched Films" collection.
+    /// - Returns: Latest set of `Film` IDs marked as "watched".
     func getStampedFilms() -> Set<String> {
         return films
     }

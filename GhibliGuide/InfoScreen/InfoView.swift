@@ -4,13 +4,13 @@
 
 import SwiftUI
 
-/// Displays about section.
+/// The info screen of the app.
 struct InfoView: View {
 
     /// Enables use of openURL for embedding link in "Ghibli API & License Info" button.
     @Environment(\.openURL) var openURL
 
-    /// About section with brief summary and instructions for app use.
+    /// Text for the "About" section, with brief summary and instructions for app use.
     private let infoText =
     """
     This is an iOS application for fans of Studio Ghibli films. All

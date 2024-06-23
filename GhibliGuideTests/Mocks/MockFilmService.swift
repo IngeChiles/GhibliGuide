@@ -5,10 +5,10 @@
 import Foundation
 @testable import GhibliGuide
 
-/// Mock implementation of film service.
+/// Mock implementation of `FilmService'.
 final class MockFilmService: FilmService {
 
-    /// Mock films array.
+    /// Mock `films` array.
     var films = [Film(
         id: "6",
         title: "Return of the Jedi",
@@ -24,7 +24,7 @@ final class MockFilmService: FilmService {
         runningTime: "135"
     )]
 
-    /// Returns mock films array.
+    /// Returns mock `films` array.
     func getFilms() async throws -> [Film] {
         return films
     }

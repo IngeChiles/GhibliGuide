@@ -4,13 +4,14 @@
 
 import SwiftUI
 
-/// Displays detailView for film.
+/// The `Film` detail screen.
 struct FilmDetailView: View {
 
-    /// A set of ids for all `Film` objects marked as "watched." Inherited from its parent view, `FilmListView.`
-    @Environment(FilmStampingService.self) var stampedFilms
+    /// Environment variable for `FilmStampingService`, used to stamp and un-stamp films.
+    /// Inherited from its parent view, `FilmListView.`
+    @Environment(FilmStampingService.self) private var stampedFilms
 
-    /// Property where `FilmDetailViewModel` will be initialized.
+    /// View Model for the view.
     @State var filmDetailVM: FilmDetailViewModel
 
     var body: some View {

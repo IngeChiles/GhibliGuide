@@ -5,11 +5,13 @@
 import XCTest
 @testable import GhibliGuide
 
-/// Tests for FilmListViewModel.
+/// Tests for `FilmListViewModel`.
 final class FilmListViewModelTests: XCTestCase {
 
+    /// The `FilmListViewModel` being tested.
     var subject: FilmListViewModel!
 
+    /// Sets up test environment with a `MockFilmService`.
     override func setUp() {
         super.setUp()
 
@@ -17,7 +19,8 @@ final class FilmListViewModelTests: XCTestCase {
     }
 
     // MARK: - Test loadData()
-    /// Tests that films array is concurrent after loadData() is called.
+
+    /// Tests that `films` array has correct data after `loadData()` is called.
     func testLoadDataUpdatesFilmsArray() async {
         await subject.loadData()
 

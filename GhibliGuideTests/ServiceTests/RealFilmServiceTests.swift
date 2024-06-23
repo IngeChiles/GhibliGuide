@@ -6,11 +6,13 @@ import Foundation
 import XCTest
 @testable import GhibliGuide
 
+/// Tests for `RealFilmService`.
 final class RealFilmServiceTests: XCTestCase {
 
+    /// The `RealFilmService` being tested.
     var subject: RealFilmService!
 
-    /// Creates the service prior to test run.
+    /// Sets up test environment with a `RealFilmService`.
     override func setUp() {
         super.setUp()
 
@@ -26,7 +28,8 @@ final class RealFilmServiceTests: XCTestCase {
     }
 
     // MARK: - Test loadData()
-    /// Tests that loadData() responds with a non-empty array of films.
+
+    /// Tests that `loadData()` responds with a non-empty array of films.
     func testLoadDataReturnsFilms() async {
         do {
             let films = try await subject.getFilms()

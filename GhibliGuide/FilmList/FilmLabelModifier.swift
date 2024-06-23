@@ -5,11 +5,12 @@
 import Foundation
 import SwiftUI
 
-/// Modifier for labeling film titles.
+/// Modifier for `Film` labels.
 struct FilmLabelModifier: ViewModifier {
-    
+
     /// Applies custom modifiers.
-    /// - Parameter content: content to be modified, in this case, a film label for the `title` property on a `Film` object.
+    /// - Parameter content: content to be modified, in this case, a film label for the `title` 
+    /// property on a `Film` object.
     /// - Returns: Modified view.
     func body(content: Content) -> some View {
         content

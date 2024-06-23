@@ -4,10 +4,10 @@
 
 import Foundation
 
-/// ViewModel for FilmDetailView, which displays a detail view for a film.
+/// ViewModel for FilmDetailView, which displays film details.
 @Observable class FilmDetailViewModel {
 
-    /// `Film` object will be passed through this property from `FilmDetailViewModel` to `FilmDetailView`.
+    /// `Film` object that contains details about the film.
     var film: Film
 
     /// Initializes `FilmDetailViewModel`.

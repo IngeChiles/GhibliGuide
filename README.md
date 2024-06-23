@@ -35,21 +35,23 @@ No authentication is needed to clone and run this app. Simply clone and open in 
 ## Acknowledgements
 I gratefully cherrypicked from the following resources:
 
-  - [Karin Prater: Property wrappers in SwiftUI: How to choose between @EnvironmentObject, @ObservableObject and more](https://www.youtube.com/watch?v=J6afKuHJFCE)
+- [Karin Prater: Property wrappers in SwiftUI: How to choose between @EnvironmentObject, @ObservableObject and more](https://www.youtube.com/watch?v=J6afKuHJFCE)
 
-   - [Paul Hudson: Sharing @Observable objects through SwiftUI's environment](https://www.hackingwithswift.com/books/ios-swiftui/sharing-observable-objects-through-swiftuis-environment)
+- [Paul Hudson: Sharing @Observable objects through SwiftUI's environment](https://www.hackingwithswift.com/books/ios-swiftui/sharing-observable-objects-through-swiftuis-environment)
 
- - [Paul Hudson: Letting the User Mark Favorites](https://www.youtube.com/watch?v=FKUBspZLZb8)
+- [Paul Hudson: Letting the User Mark Favorites](https://www.youtube.com/watch?v=FKUBspZLZb8)
 
-  - [Monica Z: How to Create a Rubber Stamp Effect in Adobe Photoshop](https://www.youtube.com/watch?v=scG966JJfJk)
+- [Monica Z: How to Create a Rubber Stamp Effect in Adobe Photoshop](https://www.youtube.com/watch?v=scG966JJfJk)
   
-  - [Prof G: Add a LaunchScreen to your SwiftUI App](https://www.youtube.com/watch?v=1zqxW1ADRzk)
+- [Prof G: Add a LaunchScreen to your SwiftUI App](https://www.youtube.com/watch?v=1zqxW1ADRzk)
 
-  - [Professor John Gallaugher's Build Apps with SwiftUI Course](https://www.youtube.com/@profgallaugher)
+- [Professor John Gallaugher's Build Apps with SwiftUI Course](https://www.youtube.com/@profgallaugher)
   
-  - [Paul Hudson: 100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)
+- [Paul Hudson: 100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)
   
-   - [Hillary Nyakundi: How to Write a Good Readme](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
+- [Hillary Nyakundi: How to Write a Good Readme](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
+
+-
 
 
 ## Roadmap

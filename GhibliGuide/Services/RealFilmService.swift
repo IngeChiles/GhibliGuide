@@ -6,35 +6,51 @@ import Foundation
 
 /// Enables dependency injection and testing by creating a standard for both test and real services to follow.
 protocol FilmService {
-    /// Gets array of `Film` objects from a service.
+
+    /// Gets array of `Film` objects.
     /// - Returns: An array of `Film` objects.
     func getFilms() async throws -> [Film]
 }
 
-/// Error cases to be thrown by getFilms().
-enum GFError: Error {
+/// Errors thrown by `FilmService`.
+enum FilmServiceError: Error {
     case invalidURL
     case networkError
+    case decodingError
+    case unknownError
 }
 
-/// A service that uses `URLSession()` to return and `JSONDecoder()` to decode an array of `Film` objects from the Studio Ghibli API.
+/// A service that uses `URLSession` and`JSONDecoder` to download and decode an array of
+/// `Film` objects from the Studio Ghibli API.
 class RealFilmService: FilmService {
+
     /// Instance of `URLSession` to be passed into getFilms().
     private let session = URLSession.shared
 
-    /// Decodes and returns an array of Film objects from Ghibli API.
+    /// Downloads, decodes, and returns an array of Film objects from Ghibli API.
     /// - Returns: Decoded array of `Film` objects.
     func getFilms() async throws -> [Film] {
         guard let url = URL(string: "https://ghibliapi.vercel.app/films") else {
-            throw GFError.invalidURL
+            throw FilmServiceError.invalidURL
         }
 
         let request = URLRequest(url: url)
 
-        let (data, _) = try await session.data(for: request)
+        do {
+            let (data, _) = try await session.data(for: request)
 
-        let filmsResponse = try JSONDecoder().decode([Film].self, from: data)
+            let filmsResponse = try JSONDecoder().decode([Film].self, from: data)
 
-        return filmsResponse
+            return filmsResponse
+
+        } catch is URLError {
+            throw FilmServiceError.networkError
+
+        } catch is DecodingError {
+            throw FilmServiceError.decodingError
+
+        } catch {
+            throw FilmServiceError.unknownError
+        }
     }
 }

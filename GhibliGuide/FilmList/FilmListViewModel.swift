@@ -4,25 +4,29 @@
 
 import Foundation
 
-/// ViewModel for FilmsListView, which loads an array of Film objects from a FilmService.
+/// ViewModel for FilmsListView, which provides an array of `Film` objects.
 @Observable class FilmListViewModel {
 
-    /// Creates a `Film Service` when `FilmListViewModel` is initialized.
+    /// `FilmService` for loading `Film` objects from network.
     private let service: FilmService
 
     ///  Array of `Film` objects to be surfaced in `FilmListView`.
     var films: [Film] = []
+
+    /// Displays an error alert to user if true.
+    var errorAlert = false
 
     /// Initializes a`FilmListViewModel` with a `FilmService`.
     init(service: FilmService) {
         self.service = service
     }
 
-    /// Function which loads data from `FilmService`.
+    /// Loads data from `FilmService`.
     @MainActor func loadData() async {
         do {
             self.films = try await service.getFilms()
         } catch {
+            errorAlert = true
         }
     }
 }

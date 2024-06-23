@@ -4,11 +4,12 @@
 
 import SwiftUI
 
-/// Displays a scrollable grid of film objects.
+/// The film list screen: the initial screen of the app.
 struct FilmListView: View {
 
-    /// Environment variable for a set of all `Film` objects marked as "watched." Inherited from `GhibliGuideApp`.
-    @Environment(FilmStampingService.self) var stampedFilms
+    /// Environment variable for `FilmStampingService`, used to stamp and un-stamp films.
+    /// Inherited from `GhibliGuideApp`.
+    @Environment(FilmStampingService.self) private var stampedFilms
 
     /// Instantiation of the View Model with `RealFilmService` also instantiated and injected as a dependency.
     @State var filmListVM = FilmListViewModel(service: RealFilmService())
@@ -49,6 +50,10 @@ struct FilmListView: View {
         .accentColor(.forest)
         .task {
             await filmListVM.loadData()
+        }
+        .alert("Oops! 🙀", isPresented: $filmListVM.errorAlert) {
+        } message: {
+            Text("Something went wrong. Please check your connection and try again.")
         }
         .preferredColorScheme(.light)
     }

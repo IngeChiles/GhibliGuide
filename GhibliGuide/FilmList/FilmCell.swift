@@ -4,16 +4,18 @@
 
 import SwiftUI
 
-/// Displays a film and it's title, with an opacity overlay if filmStamped is true.
+/// Displays a film and its title, with an opacity overlay if `filmStamped` is true.
 struct FilmCell: View {
 
-    /// A set of ids for all `Film` objects marked as "watched." Inherited from its parent view, `FilmListView.`
-    @Environment(FilmStampingService.self) var stampedFilms
+    /// Environment variable for `FilmStampingService`, used to stamp and un-stamp films.
+    /// Inherited from its parent view, `FilmListView.`
+    @Environment(FilmStampingService.self) private var stampedFilms
 
-    /// `Film` object to be passed into this view and displayed to user.
+    /// `Film` object that contains info that is displayed to user.
     var film: Film
 
-    /// View body containing image, "watched" stamp condition with totoro stamp and overlay if true, progress view, and modifiers all views.
+    /// View body containing image, "watched" stamp condition with totoro stamp and overlay if true, 
+    /// progress view, and modifiers all views.
     var body: some View {
             ZStack {
                 AsyncImage(url: film.image) { image in

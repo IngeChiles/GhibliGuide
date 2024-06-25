@@ -10,6 +10,7 @@
 		8322D3242C2A84F400DB21BD /* InfoViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322D3232C2A84F400DB21BD /* InfoViewUITests.swift */; };
 		8322D3262C2A9B9100DB21BD /* ConditionalThemeModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322D3252C2A9B9100DB21BD /* ConditionalThemeModifier.swift */; };
 		8322D3282C2AA2F400DB21BD /* ConditionalThemeButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322D3272C2AA2F400DB21BD /* ConditionalThemeButtonStyle.swift */; };
+		8322D32A2C2B1D6200DB21BD /* ConditionalThemeLinkButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8322D3292C2B1D6200DB21BD /* ConditionalThemeLinkButtonStyle.swift */; };
 		83382F7A2C10C54900D1E37B /* FilmCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83382F792C10C54900D1E37B /* FilmCell.swift */; };
 		8348C5402C0FD475004373C2 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8348C53F2C0FD475004373C2 /* InfoView.swift */; };
 		8348C55B2C0FE248004373C2 /* CactusClassicalSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8348C55A2C0FE248004373C2 /* CactusClassicalSerif-Regular.ttf */; };
@@ -55,6 +56,7 @@
 		8322D3232C2A84F400DB21BD /* InfoViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewUITests.swift; sourceTree = "<group>"; };
 		8322D3252C2A9B9100DB21BD /* ConditionalThemeModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalThemeModifier.swift; sourceTree = "<group>"; };
 		8322D3272C2AA2F400DB21BD /* ConditionalThemeButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalThemeButtonStyle.swift; sourceTree = "<group>"; };
+		8322D3292C2B1D6200DB21BD /* ConditionalThemeLinkButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalThemeLinkButtonStyle.swift; sourceTree = "<group>"; };
 		83382F792C10C54900D1E37B /* FilmCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCell.swift; sourceTree = "<group>"; };
 		8348C53F2C0FD475004373C2 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		8348C5592C0FDF3F004373C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				8348C53F2C0FD475004373C2 /* InfoView.swift */,
+				8322D3292C2B1D6200DB21BD /* ConditionalThemeLinkButtonStyle.swift */,
 			);
 			path = InfoScreen;
 			sourceTree = "<group>";
@@ -435,6 +438,7 @@
 				83F156AE2C0E675000742B4E /* FilmLabelModifier.swift in Sources */,
 				838B3F122C0915F500518808 /* Film.swift in Sources */,
 				838B3F142C09180B00518808 /* RealFilmService.swift in Sources */,
+				8322D32A2C2B1D6200DB21BD /* ConditionalThemeLinkButtonStyle.swift in Sources */,
 				838B3EEA2C09158B00518808 /* FilmListView.swift in Sources */,
 				8322D3282C2AA2F400DB21BD /* ConditionalThemeButtonStyle.swift in Sources */,
 				838B3EE82C09158B00518808 /* GhibliGuideApp.swift in Sources */,

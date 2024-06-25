@@ -53,7 +53,7 @@ I gratefully cherrypicked from the following resources:
 
 - [Mohammad Azam: Writing UI Tests for SwiftUI Apps](https://www.youtube.com/watch?v=uwpUQIUmw2g)
 
-- [@Alchi's Answer: How to UI Test Opening URL in External Browser(StackOverflow)] (https://stackoverflow.com/questions/64475077/is-it-possible-to-testing-uitest-xcui-when-open-url-external-browser)
+- [Alchi's Answer: How to UI Test Opening a URL in Browser](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
 
 - [Logan Koshenka: SwiftUI Tutorial: Dark Mode, Colors, Environment](https://www.youtube.com/watch?v=0AhMrJyuQpg)
 

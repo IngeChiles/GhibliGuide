@@ -53,16 +53,13 @@ struct InfoView: View {
                 Button("Ghibli API & License Info") {
                     openURL(URL(string: "https://ghibliapi.vercel.app/")!)
                 }
-                .buttonStyle(.borderedProminent)
-                .accentColor(.forest)
+                .buttonStyle(ConditionalThemeLinkButtonStyle())
                 .padding(.top, 20)
                 .accessibilityIdentifier("ghibliAPILinkButton")
-
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .foregroundStyle(.cloud)
-
         }
         .navigationBarTitleDisplayMode(.inline)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

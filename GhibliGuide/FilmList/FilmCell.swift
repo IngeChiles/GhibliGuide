@@ -14,49 +14,50 @@ struct FilmCell: View {
     /// `Film` object that contains info that is displayed to user.
     var film: Film
 
-    /// View body containing image, "watched" stamp condition with totoro stamp and overlay if true, 
+    /// View body containing image, "watched" stamp condition with totoro stamp and overlay if true,
     /// progress view, and modifiers all views.
     var body: some View {
-            ZStack {
-                AsyncImage(url: film.image) { image in
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        .overlay {
-                            if stampedFilms.contains(film) {
-                                Rectangle()
-                                    .foregroundStyle(.cloud)
-                                    .opacity(0.5)
-                            }
+        ZStack {
+            AsyncImage(url: film.image) { image in
+                image
+                    .resizable()
+                    .scaledToFit()
+                    .overlay {
+                        if stampedFilms.contains(film) {
+                            Rectangle()
+                                .foregroundStyle(.cloud)
+                                .opacity(0.5)
                         }
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
-                        .shadow(radius: 10, x: 5, y: 10)
-                        .accessibilityLabel("Poster for \(film.title)")
+                    }
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .shadow(radius: 10, x: 5, y: 10)
+                    .accessibilityLabel("Poster for \(film.title)")
 
-                } placeholder: {
-                    RoundedRectangle(cornerRadius: 15)
-                        .frame(width: 170, height: 280)
-                        .aspectRatio(1, contentMode: .fit)
-                        .overlay {
-                            ProgressView()
-                        }
-                }
-                .padding(.bottom, 10)
-
-                if stampedFilms.contains(film) {
-                    Image("totoro-stamp-watched")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .accessibilityLabel("\(film.title) is stamped.")
-                }
-
-                Text(film.title)
-                    .filmLabel()
+            } placeholder: {
+                RoundedRectangle(cornerRadius: 15)
+                    .frame(width: 170, height: 280)
+                    .aspectRatio(1, contentMode: .fit)
+                    .overlay {
+                        ProgressView()
+                    }
             }
-            .padding(3)
-            .padding(.bottom, 40)
+            .padding(.bottom, 10)
+
+            if stampedFilms.contains(film) {
+                Image("totoro-stamp-watched")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .accessibilityLabel("\(film.title) is stamped.")
+            }
+
+            Text(film.title)
+                .filmLabel()
+                .accessibilityIdentifier("filmCell_\(film.id)")
         }
+        .padding(3)
+        .padding(.bottom, 40)
     }
+}
 
 #Preview {
     let film = Film(

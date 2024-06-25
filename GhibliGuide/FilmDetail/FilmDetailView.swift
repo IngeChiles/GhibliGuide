@@ -41,7 +41,6 @@ struct FilmDetailView: View {
                     if stampedFilms.contains(filmDetailVM.film) {
                         Image("totoro-stamp-watched")
                             .accessibilityLabel("\(filmDetailVM.film.title) is stamped.")
-
                     }
                 }
                 .padding()
@@ -54,14 +53,16 @@ struct FilmDetailView: View {
                             stampedFilms.add(filmDetailVM.film)
                         }
                     }
-                    .buttonStyle(.borderedProminent)
-                    .foregroundStyle(.cloud)
-                    .accentColor(.oakLeaf)
+                    .accessibilityIdentifier("stampFilmButton")
+                    .accessibilityLabel(stampedFilms.contains(filmDetailVM.film) ?
+                                        "Remove stamp from film" : "Hey I've seen this one!")
+                    .buttonStyle(ConditionalThemeButtonStyle())
                     .padding(.bottom)
 
                     Text(filmDetailVM.film.title)
                         .fontWeight(.bold)
                         .font(.largeTitle)
+                        .accessibilityIdentifier("filmTitle_\(filmDetailVM.film.id)")
 
                     Text("\"\(filmDetailVM.film.originalTitle)\"")
                         .fontWeight(.bold)
@@ -81,13 +82,12 @@ struct FilmDetailView: View {
                         .font(.title3)
                 }
                 .multilineTextAlignment(.center)
-                .foregroundStyle(.oakLeaf)
                 .padding(20)
 
                 Image("stick-divider")
             }
         }
-        .background(.cream)
+        .conditionalTheme()
         .navigationBarTitle("", displayMode: .inline)
     }
 }

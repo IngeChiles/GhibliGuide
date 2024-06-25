@@ -36,7 +36,7 @@ struct FilmListView: View {
                 .padding(10)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(.cream)
+            .conditionalTheme()
             .navigationBarTitle("Ghibli Guide", displayMode: .large)
             .toolbar {
                 ToolbarItemGroup {
@@ -44,10 +44,11 @@ struct FilmListView: View {
                         Image(systemName: "info.circle")
                     }
                     .accessibilityLabel("Info Page")
+                    .accessibilityIdentifier("infoScreenButton")
                 }
             }
         }
-        .accentColor(.forest)
+        .conditionalTheme()
         .task {
             await filmListVM.loadData()
         }
@@ -55,7 +56,6 @@ struct FilmListView: View {
         } message: {
             Text("Something went wrong. Please check your connection and try again.")
         }
-        .preferredColorScheme(.light)
     }
 }
 

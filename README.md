@@ -16,7 +16,7 @@ In this project, I learned how to create what is essentially a "favoriting" feat
 
 I strenghthened my understanding of the importance of dependency injection for unit testing, because it allowed me to test my viewmodel by injecting it with a mock service.
 
-This project includes unit tests for both the service and view model layers.
+This project includes unit tests for both the service and view model layers, as well as UI tests for all screens.
 
 I used this free Studio Ghibli API and it's documentation to fetch an array of films to display to the user: 
 https://ghibliapi.vercel.app/
@@ -51,7 +51,11 @@ I gratefully cherrypicked from the following resources:
   
 - [Hillary Nyakundi: How to Write a Good Readme](https://www.freecodecamp.org/news/how-to-write-a-good-readme-file/)
 
--
+- [Mohammad Azam: Writing UI Tests for SwiftUI Apps](https://www.youtube.com/watch?v=uwpUQIUmw2g)
+
+- [@Alchi's Answer: How to UI Test Opening URL in External Browser(StackOverflow)] (https://stackoverflow.com/questions/64475077/is-it-possible-to-testing-uitest-xcui-when-open-url-external-browser)
+
+- [Logan Koshenka: SwiftUI Tutorial: Dark Mode, Colors, Environment](https://www.youtube.com/watch?v=0AhMrJyuQpg)
 
 
 ## Roadmap

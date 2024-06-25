@@ -34,6 +34,7 @@ struct InfoView: View {
                             size: 40
                         )
                     )
+                    .accessibilityIdentifier("infoScreenHeader")
 
                 Image("stick-divider")
                     .padding(.top, -20)
@@ -55,6 +56,7 @@ struct InfoView: View {
                 .buttonStyle(.borderedProminent)
                 .accentColor(.forest)
                 .padding(.top, 20)
+                .accessibilityIdentifier("ghibliAPILinkButton")
 
             }
             .padding()
